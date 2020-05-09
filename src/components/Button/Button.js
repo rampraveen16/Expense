@@ -6,7 +6,6 @@ const ButtonDiv = styled.button `
     margin: 10px 20px;
     cursor: pointer;
     display:inline-block;
-    font-family: cursive;
     padding: 5px;
     border: 1px solid #000;
     box-shadow: 1px 4px 5px 5px #000;
