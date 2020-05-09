@@ -1,36 +1,9 @@
 import React from 'react'
-import {thousands_separators} from './Value'
+import {thousands_separators, getAmount} from './Value'
 const board = (props) => {
-    // eslint-disable-next-line array-callback-return
-    let incomeAmount = props.data.amount.filter((ele) => {
-        if(ele.status==='INCOME'){
-            return ele;
-        }
-    
-    })
-    let getIncome = incomeAmount.map((ele => ele.amount));
-    let totalIncome =0;
-    if(getIncome.length !==0){
-     totalIncome =getIncome.reduce((a,b)=>{
-         return parseInt(a) + parseInt(b)
-    })
-    }
 
-    // eslint-disable-next-line array-callback-return
-    let spendAmount = props.data.amount.filter((ele) => {
-        if(ele.status==='SPEND'){
-            return ele;
-        }
-    
-    })
-
-    let getSpend = spendAmount.map((ele => ele.amount));
-    let totalSpend =0;
-    if(getSpend.length !==0){
-        totalSpend =getSpend.reduce((a,b)=>{
-         return parseInt(a) + parseInt(b)
-    })
-    }
+    let totalIncome = getAmount(props,'INCOME')
+    let totalSpend = getAmount(props,'SPEND')
     let totalAmount = (isNaN(totalIncome - totalSpend))? null : totalIncome - totalSpend
 
     return(
