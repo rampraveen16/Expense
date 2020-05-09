@@ -15,15 +15,17 @@ const ButtonDiv = styled.button `
     }
 
 `
-    
-    return(
-        <React.Fragment>
-
+    let button = (props.visible === true) ? '':
+    <React.Fragment>
         <div style={{textAlign:'center'}}>
         <ButtonDiv style={{background:'#0ce10c'}}onClick={()=>{props.status('INCOME')}}>Add Income</ButtonDiv>
         <ButtonDiv  style={{background:'red'}} onClick={()=>{props.status('SPEND')}}>Add Spending</ButtonDiv>
         </div>
         </React.Fragment>
+    return(
+        
+        button
+        
     )
 }
 

@@ -111,7 +111,7 @@ class App extends Component {
            amount={this.amountHandeler} description={this.descriptionHandeler} visible = {this.state.visible}/>
         </section>
         <section>
-           <Button  status = { this.statusHandler}/>
+           <Button  status = { this.statusHandler} visible = {this.state.visible}/>
         </section>
       </div>
     )
