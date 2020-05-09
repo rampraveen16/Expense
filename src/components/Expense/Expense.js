@@ -24,7 +24,7 @@ const expense = (props) => {
      
     (Object.keys(props.data).length === 0)? '': 
         <div>
-         <p style={{fontSize:'10px',margin:0,color:'#6f6969'}}>{props.data.date}</p>
+         <p style={{fontSize:'10px',margin:'5px 0 0 5px',color:'#6f6969'}}>{props.data.date}</p>
          <StyleDiv>
             <p style={{fontSize:'15px'}} className={color}>{thousands_separators(props.data.amount)}</p>
             <p style={{fontSize:'14px'}}>{props.data.description}</p>
