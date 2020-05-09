@@ -1,0 +1,37 @@
+.input--wrap form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+input,textarea {
+    display: inline-block;
+    margin: 5px 10px;
+    border: 1px solid #000;
+    padding-left: 10px;
+    font-size: 13px;
+    width: 70%;
+    max-width: 170px;
+}
+
+input[type=submit] {
+cursor: pointer;
+background: #3f77cc;
+color: #fff;
+border: 0;
+}
+input[type=date]::-webkit-inner-spin-button,
+input[type=date]::-webkit-calendar-picker-indicator {
+    -webkit-appearance: none;
+   -moz-appearance:    none;
+   appearance:         none;
+}
+input[type=date]{
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+}
+.error {
+    color: red;
+    border-color: red;
+}
