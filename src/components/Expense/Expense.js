@@ -11,6 +11,12 @@ const expense = (props) => {
     & p {
       margin: 5px;
     }
+    & img {
+      transition:0.35s all;
+      &:hover {
+        transform:scale(1.3)
+      }
+    }
     `
     let color = (props.data.status ==='INCOME') ? 'green' : 'red'
     
@@ -22,7 +28,7 @@ const expense = (props) => {
          <StyleDiv>
             <p style={{fontSize:'15px'}} className={color}>{thousands_separators(props.data.amount)}</p>
             <p style={{fontSize:'14px'}}>{props.data.description}</p>
-            <img style={{width: '35px', cursor:'pointer'}} onClick ={()=>{props.remove(props.data.id)}} src={deleteImag} alt="delete"/>
+            <img style={{width: '30px', cursor:'pointer'}} onClick ={()=>{props.remove(props.data.id)}} src={deleteImag} alt="delete"/>
          </StyleDiv>
         </div>
     )
