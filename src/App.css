@@ -16,6 +16,7 @@ h2, h4 {
   margin: auto;
   min-height: 100vh;
   max-width: 760px;
+  width:90%;
 }
 .App {
   text-align: center;
